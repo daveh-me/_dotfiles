@@ -1,4 +1,4 @@
-# .vimrc
+" .vimrc
 
-# relative numbering - learn to jump
+" relative numbering - learn to jump
 set rnu
