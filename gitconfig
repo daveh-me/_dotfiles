@@ -31,3 +31,5 @@
     autocrlf = input
 [apply]
     whitespace = fix
+[merge]
+	tool = vimdiff
