@@ -115,3 +115,7 @@ endfunction
 map <leader>n :call RenameFile()<cr>
 
 let g:html_indent_tags = 'li\|p'
+" Index ctags from any project, including those outside Rails
+let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
+map <Leader>ct :!ctags -R .<CR>
+
