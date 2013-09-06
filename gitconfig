@@ -1,3 +1,33 @@
 [user]
-	name = Dave Hooper
-	email = dave@daveh.me
+    name = Dave Hooper
+    email = dave@daveh.me
+[push]
+    default = current
+[color]
+    status = auto
+    diff = auto
+    branch = auto
+    interactive = auto
+    ui = true
+[alias]
+    aa = add --all
+    ap = add --patch
+    br = branch
+    ci = commit -v
+    co = checkout
+    di = diff --word-diff
+    fixup = commit --amend -C HEAD
+    ignored-files = ls-files --others -i --exclude-standard
+    l = log --oneline --decorate --graph
+    merge-branch = !git checkout master && git merge @{-1}
+    modified-files = ls-files -m
+    st = status -s -b
+    timeline = log --graph --branches --pretty=oneline --decorate
+    untracked-files = ls-files -o --exclude-standard
+    up = !git fetch origin && git rebase origin/develop
+    upm = !git fetch origin && git rebase origin/master
+[core]
+    excludesfile = ~/.gitignore
+    autocrlf = input
+[apply]
+    whitespace = fix
