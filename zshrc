@@ -1,5 +1,5 @@
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="kphoen"
+ZSH_THEME="af-magic"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_CORRECTION="true"
 plugins=(rails4)
