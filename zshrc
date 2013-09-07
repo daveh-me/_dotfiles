@@ -1,8 +1,6 @@
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="af-magic"
-DISABLE_AUTO_UPDATE="true"
-DISABLE_CORRECTION="true"
-plugins=(rails4)
+ZSH_THEME="ys"
+plugins=(rails4 tmux)
 source $ZSH/oh-my-zsh.sh
 
 # stop <ctrl>-s locking the terminal
