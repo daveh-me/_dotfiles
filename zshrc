@@ -12,3 +12,4 @@ source $ZSH/oh-my-zsh.sh
 stty -ixon
 
 alias g='git'
+alias tk='tmux kill-session -t '
