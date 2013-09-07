@@ -15,3 +15,5 @@ alias tk='tmux kill-session -t '
 
 export EDITOR=vi
 set -o emacs
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
