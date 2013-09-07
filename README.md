@@ -10,5 +10,6 @@ Mainly ninja'd from:
 cd ~
 git clone https://github.com/davehooper/_dotfiles .dotfiles
 cd .dotfiles
+git submodule foreach git pull origin master
 ./setup.sh
 ```
