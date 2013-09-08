@@ -2,8 +2,13 @@
 set nocompatible " vim not vi
 execute pathogen#infect()
 syntax on
-set background=dark
 filetype plugin indent on
+
+" colours
+set background=dark
+set t_Co=256
+set t_ut=
+:color grb256
 
 let mapleader=","
 
