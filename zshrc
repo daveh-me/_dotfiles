@@ -1,6 +1,6 @@
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="ys"
-plugins=(rails4 tmux)
+ZSH_THEME="terminalparty"
+plugins=(rails4 tmux git)
 source $ZSH/oh-my-zsh.sh
 
 # stop <ctrl>-s locking the terminal
