@@ -1,5 +1,5 @@
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="terminalparty"
+ZSH_THEME="gnzh"
 plugins=(rails4 tmux git)
 source $ZSH/oh-my-zsh.sh
 
@@ -11,6 +11,8 @@ alias ll='ls -lG'
 alias g='git'
 alias tk='tmux kill-session -t '
 alias tmux='TERM=xterm-256color tmux'
+alias ..='cd ..'
+alias ...='cd ../..'
 
 export VISUAL=vim
 export EDITOR=$VISUAL
