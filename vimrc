@@ -72,8 +72,10 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 " ctrl-s saves, NB 'stty -ixon' in .zshrc
 :nmap <c-s> :w<cr>
-:imap <c-s> <esc>:w<cr>a
-:imap <c-s> <esc><c-s>
+:imap <c-s> <esc>:w<cr>
+:imap <c-x> <esc>:x<cr>
+:map  <c-x> :x<cr>
+
 " swap to alternate buffer
 nnoremap <leader><leader> <c-^>
 " alternate for <esc>
