@@ -1,5 +1,5 @@
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="gnzh"
+ZSH_THEME="ys"
 plugins=(rails4 tmux git)
 source $ZSH/oh-my-zsh.sh
 

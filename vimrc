@@ -2,6 +2,8 @@
 set nocompatible " vim not vi
 execute pathogen#infect()
 syntax on
+set encoding=utf-8
+set synmaxcol=200
 filetype plugin indent on
 
 " colours
@@ -14,6 +16,8 @@ let mapleader=","
 
 set rnu
 set history=1000
+set hidden
+set autoread
 set expandtab
 set tabstop=4
 set softtabstop=4
@@ -36,8 +40,14 @@ set laststatus=2
 set scrolloff=3
 set incsearch
 set hlsearch
+set ignorecase
+set smartcase
 set splitbelow
 set splitright
+set wildignore+=tmp/**,*.rbc,.rbx,*.scssc,*.sassc
+set wildignore+=bundle/**,vendor/bundle/**,vendor/cache/**
+set wildignore+=node_modules/**
+
 " emacs movement in insert mode
 imap <C-a> <C-o>0
 imap <C-e> <C-o>$
@@ -64,10 +74,10 @@ nnoremap <c-l> <c-w>l
 :nmap <c-s> :w<cr>
 :imap <c-s> <esc>:w<cr>a
 :imap <c-s> <esc><c-s>
-" ctrl-p: https://github.com/kien/ctrlp.vim
-nnoremap <leader>p :CtrlP<CR>
 " swap to alternate buffer
 nnoremap <leader><leader> <c-^>
+" alternate for <esc>
+inoremap <C-[> <esc>
 
 augroup vimrcEx
     autocmd!
