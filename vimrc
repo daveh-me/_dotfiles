@@ -75,6 +75,7 @@ nnoremap <c-l> <c-w>l
 :imap <c-s> <esc>:w<cr>
 :imap <c-x> <esc>:x<cr>
 :map  <c-x> :x<cr>
+nnoremap ; :
 
 " swap to alternate buffer
 nnoremap <leader><leader> <c-^>
@@ -128,6 +129,9 @@ function! RenameFile()
     endif
 endfunction
 map <leader>n :call RenameFile()<cr>
+
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v', 100)
 
 let g:html_indent_tags = 'li\|p'
 " Index ctags from any project, including those outside Rails
