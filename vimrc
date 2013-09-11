@@ -77,6 +77,11 @@ nnoremap <c-l> <c-w>l
 :map  <c-x> :x<cr>
 nnoremap ; :
 
+vmap <expr> <LEFT> DVB_Drag('left') 
+vmap <expr> <RIGHT> DVB_Drag('right') 
+vmap <expr> <DOWN> DVB_Drag('down') 
+vmap <expr> <UP> DVB_Drag('up')
+
 " swap to alternate buffer
 nnoremap <leader><leader> <c-^>
 " alternate for <esc>
