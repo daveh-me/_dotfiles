@@ -13,6 +13,7 @@ alias tk='tmux kill-session -t '
 alias tmux='TERM=xterm-256color tmux'
 alias ..='cd ..'
 alias ...='cd ../..'
+alias psg='ps -ef | grep '
 
 export VISUAL=vim
 export EDITOR=$VISUAL

@@ -25,6 +25,7 @@ set shiftwidth=4
 set smarttab
 set shiftround
 set cursorline
+set ruler
 set backup
 set backupdir=~/.vim-tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/tmp,/var/tmp,/tmp
@@ -84,8 +85,17 @@ vmap <expr> <UP> DVB_Drag('up')
 
 " swap to alternate buffer
 nnoremap <leader><leader> <c-^>
+" swap to alternate file
+nnoremap <leader>a :A<cr>
 " alternate for <esc>
 inoremap <C-[> <esc>
+
+" vim-rspec
+let g:rspec_command = "Dispatch spring rspec -fp -b {spec}"
+map <Leader>mt :call RunCurrentSpecFile()<CR>
+map <Leader>m :call RunNearestSpec()<CR>
+map <Leader>ml :call RunLastSpec()<CR>
+map <Leader>ma :call RunAllSpecs()<CR>
 
 augroup vimrcEx
     autocmd!

@@ -7,15 +7,15 @@ timestamp=`date +%Y%m%d%H%M%S`
 cd $source_dir
 
 # symlinks to $HOME
-for link_source in `cat link-sources.txt`
-do
-    target="$HOME/.$link_source"
-    if [ -f $target ] || [ -L $target ]
-    then
-        mv -v $target $target.$timestamp
-    fi
-    ln -sv $source_dir/$link_source $target
-done
+#for link_source in `cat link-sources.txt`
+#do
+#    target="$HOME/.$link_source"
+#    if [ -f $target ] || [ -L $target ]
+#    then
+#        mv -v $target $target.$timestamp
+#    fi
+#    ln -sv $source_dir/$link_source $target
+#done
 
 # grab stuff from github
 rm -rf oh-my-zsh
