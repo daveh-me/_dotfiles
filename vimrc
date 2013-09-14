@@ -76,7 +76,12 @@ nnoremap <c-l> <c-w>l
 :imap <c-s> <esc>:w<cr>
 :imap <c-x> <esc>:x<cr>
 :map  <c-x> :x<cr>
-nnoremap ; :
+
+nnoremap ;; :
+inoremap ;l <esc>
+inoremap ;k <esc>:update<cr>
+inoremap ;j <c-O>:update<cr>
+nnoremap ;j :update<cr>
 
 vmap <expr> <LEFT> DVB_Drag('left') 
 vmap <expr> <RIGHT> DVB_Drag('right') 
@@ -96,6 +101,8 @@ map <Leader>mt :call RunCurrentSpecFile()<CR>
 map <Leader>m :call RunNearestSpec()<CR>
 map <Leader>ml :call RunLastSpec()<CR>
 map <Leader>ma :call RunAllSpecs()<CR>
+
+map <Leader>t :tabnew<cr>
 
 augroup vimrcEx
     autocmd!

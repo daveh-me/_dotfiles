@@ -6,6 +6,7 @@ source $ZSH/oh-my-zsh.sh
 # stop <ctrl>-s locking the terminal
 stty -ixon
 
+alias ack='nocorrect ack'
 alias g='git'
 alias ls='ls -G'
 alias ll='ls -lG'
