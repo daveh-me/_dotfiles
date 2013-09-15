@@ -8,9 +8,11 @@ filetype plugin indent on
 
 " colours
 set background=dark
+syntax enable
+let g:solarized_termcolors=256
+colorscheme solarized
 set t_Co=256
 set t_ut=
-:color grb256
 
 let mapleader=","
 
@@ -82,6 +84,9 @@ inoremap ;l <esc>
 inoremap ;k <esc>:update<cr>
 inoremap ;j <c-O>:update<cr>
 nnoremap ;j :update<cr>
+nnoremap ;q :q<cr>
+inoremap ;x <esc>:x<cr>
+nnoremap ;x :x<cr>
 
 vmap <expr> <LEFT> DVB_Drag('left') 
 vmap <expr> <RIGHT> DVB_Drag('right') 
@@ -98,7 +103,7 @@ inoremap <C-[> <esc>
 " vim-rspec
 let g:rspec_command = "Dispatch spring rspec -fp -b {spec}"
 map <Leader>mt :call RunCurrentSpecFile()<CR>
-map <Leader>m :call RunNearestSpec()<CR>
+map <Leader>mm :call RunNearestSpec()<CR>
 map <Leader>ml :call RunLastSpec()<CR>
 map <Leader>ma :call RunAllSpecs()<CR>
 
