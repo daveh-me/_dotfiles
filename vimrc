@@ -54,8 +54,6 @@ set wildignore+=node_modules/**
 " emacs movement in insert mode
 imap <C-a> <C-o>0
 imap <C-e> <C-o>$
-map <C-e> $
-map <C-a> 0
 
 " highlight trailing whitespace
 set list listchars=tab:»·,trail:·
@@ -73,15 +71,15 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-" ctrl-s saves, NB 'stty -ixon' in .zshrc
-:nmap <c-s> :w<cr>
-:imap <c-s> <esc>:w<cr>
-:imap <c-x> <esc>:x<cr>
-:map  <c-x> :x<cr>
 
 nnoremap ;; :
+nnoremap ;bd :bd<cr>
+nnoremap ;bn :bn<cr>
+nnoremap ;bp :bp<cr>
+nnoremap ;e :e
 inoremap ;l <esc>
 inoremap ;k <esc>:update<cr>
+nnoremap ;k :w<cr>
 inoremap ;j <c-O>:update<cr>
 nnoremap ;j :update<cr>
 nnoremap ;q :q<cr>
@@ -108,6 +106,7 @@ map <Leader>ml :call RunLastSpec()<CR>
 map <Leader>ma :call RunAllSpecs()<CR>
 
 map <Leader>t :tabnew<cr>
+map <Leader>g :Gst<cr>
 
 augroup vimrcEx
     autocmd!
