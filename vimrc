@@ -7,7 +7,7 @@ set synmaxcol=200
 filetype plugin indent on
 
 " colours
-set background=dark
+set background=light
 syntax enable
 let g:solarized_termcolors=256
 colorscheme solarized
@@ -50,6 +50,7 @@ set splitright
 set wildignore+=tmp/**,*.rbc,.rbx,*.scssc,*.sassc
 set wildignore+=bundle/**,vendor/bundle/**,vendor/cache/**
 set wildignore+=node_modules/**
+set wildignore+=public/system/**
 
 " emacs movement in insert mode
 imap <C-a> <C-o>0
@@ -76,7 +77,7 @@ nnoremap ;; :
 nnoremap ;bd :bd<cr>
 nnoremap ;bn :bn<cr>
 nnoremap ;bp :bp<cr>
-nnoremap ;e :e
+nnoremap ;e :e 
 inoremap ;l <esc>
 inoremap ;k <esc>:update<cr>
 nnoremap ;k :w<cr>
@@ -95,8 +96,6 @@ vmap <expr> <UP> DVB_Drag('up')
 nnoremap <leader><leader> <c-^>
 " swap to alternate file
 nnoremap <leader>a :A<cr>
-" alternate for <esc>
-inoremap <C-[> <esc>
 
 " vim-rspec
 let g:rspec_command = "Dispatch spring rspec -fp -b {spec}"
@@ -106,7 +105,9 @@ map <Leader>ml :call RunLastSpec()<CR>
 map <Leader>ma :call RunAllSpecs()<CR>
 
 map <Leader>t :tabnew<cr>
-map <Leader>g :Gst<cr>
+map <Leader>gs :Gst<cr>
+map <Leader>gc :Gcommit -v<cr>
+map <Leader>gw :Gwrite<cr>
 
 augroup vimrcEx
     autocmd!
@@ -154,7 +155,8 @@ function! RenameFile()
         redraw!
     endif
 endfunction
-map <leader>n :call RenameFile()<cr>
+map <leader>f :call RenameFile()<cr>
+map <leader>b :b 
 
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
@@ -163,4 +165,6 @@ let g:html_indent_tags = 'li\|p'
 " Index ctags from any project, including those outside Rails
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 map <Leader>ct :!ctags -R .<CR>
+
+" Ignore all the product images
 
