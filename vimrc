@@ -47,10 +47,6 @@ set ignorecase
 set smartcase
 set splitbelow
 set splitright
-set wildignore+=tmp/**,*.rbc,.rbx,*.scssc,*.sassc
-set wildignore+=bundle/**,vendor/bundle/**,vendor/cache/**
-set wildignore+=node_modules/**
-set wildignore+=public/system/**
 
 " emacs movement in insert mode
 imap <C-a> <C-o>0
@@ -108,6 +104,8 @@ map <Leader>t :tabnew<cr>
 map <Leader>gs :Gst<cr>
 map <Leader>gc :Gcommit -v<cr>
 map <Leader>gw :Gwrite<cr>
+map <Leader>l :CommandT<cr>
+map <Leader>k :CommandTBuffer<cr>
 
 augroup vimrcEx
     autocmd!
@@ -166,5 +164,4 @@ let g:html_indent_tags = 'li\|p'
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 map <Leader>ct :!ctags -R .<CR>
 
-" Ignore all the product images
-
+let g:CommandTWildIgnore=&wildignore . ",**public/system/*,**tmp/*"
