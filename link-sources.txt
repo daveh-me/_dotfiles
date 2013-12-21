@@ -1,1 +1,1 @@
-gitconfig gitignore oh-my-zsh tmux.conf vim vimrc zlogin zshrc zsh zprofile
+gitconfig gitignore vim vimrc

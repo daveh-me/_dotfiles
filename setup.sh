@@ -18,8 +18,8 @@ cd $source_dir
 #done
 
 # grab stuff from github
-rm -rf oh-my-zsh
-git clone https://github.com/robbyrussell/oh-my-zsh
+#rm -rf oh-my-zsh
+#git clone https://github.com/robbyrussell/oh-my-zsh
 # and the vim stuff too
 cd $source_dir
 git_sources=`cat github-sources.txt`
