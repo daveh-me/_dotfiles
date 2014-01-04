@@ -1,6 +1,6 @@
 [user]
-    name = Dave Hooper
-    email = dave@daveh.me
+	name = Dave Hooper
+	email = dave@daveh.me
 [push]
     default = current
 [color]
