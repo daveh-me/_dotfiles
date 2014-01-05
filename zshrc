@@ -8,6 +8,7 @@ stty -ixon
 
 alias ack='nocorrect ack'
 alias g='git'
+alias gbt='for k in `git branch | perl -pe s/^..//`; do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k -- | head -n 1`\\t$k; done | sort -r'
 alias ls='ls -G'
 alias ll='ls -lG'
 alias psg='ps -ef | grep '
@@ -23,6 +24,13 @@ alias tmux='TERM=xterm-256color tmux'
 alias ..='cd ..'
 alias ...='cd ../..'
 
+export DYLD_LIBRARY_PATH=/usr/local/oracle/11gCli/instantclient/
+export NLS_LANG=AMERICAN_AMERICA.WE8MSWIN1252
+export ELASTICSEARCH_URL=http://localhost:9200
+
+export PATH=$PATH:/usr/local/oracle/11gCli/instantclient/
+export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
 export VISUAL=vim
 export EDITOR=$VISUAL
 set -o emacs
