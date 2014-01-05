@@ -35,3 +35,5 @@
 	tool = vimdiff
 [include]
     path = .gitconfig.local
+[credential]
+	helper = osxkeychain
