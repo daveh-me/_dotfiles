@@ -94,7 +94,7 @@ nnoremap <leader><leader> <c-^>
 nnoremap <leader>a :A<cr>
 
 " vim-rspec
-let g:rspec_command = "Dispatch spring rspec -fp -b {spec}"
+let g:rspec_command = "Dispatch zeus rspec -fp -b {spec}"
 map <Leader>mt :call RunCurrentSpecFile()<CR>
 map <Leader>mm :call RunNearestSpec()<CR>
 map <Leader>ml :call RunLastSpec()<CR>
@@ -104,8 +104,6 @@ map <Leader>t :tabnew<cr>
 map <Leader>gs :Gst<cr>
 map <Leader>gc :Gcommit -v<cr>
 map <Leader>gw :Gwrite<cr>
-map <Leader>l :CommandT<cr>
-map <Leader>k :CommandTBuffer<cr>
 
 augroup vimrcEx
     autocmd!
