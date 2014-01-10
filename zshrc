@@ -35,5 +35,4 @@ export VISUAL=vim
 export EDITOR=$VISUAL
 set -o emacs
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
