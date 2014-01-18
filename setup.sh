@@ -21,11 +21,11 @@ cd $source_dir
 #rm -rf oh-my-zsh
 #git clone https://github.com/robbyrussell/oh-my-zsh
 # and the vim stuff too
-cd $source_dir
-git_sources=`cat github-sources.txt`
 cd $vim_bundle_dir
 rm -rfv *
-for git_source in $git_sources
+for git_source in $(cat $source_dir/github-sources.txt)
 do
-    git clone $git_source
+	#git clone $git_source
+	dname=$(echo $git_source | cut -d / -f5 | cut -d . -f1)
+	echo $dname
 done
