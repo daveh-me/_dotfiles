@@ -94,7 +94,7 @@ nnoremap <leader><leader> <c-^>
 nnoremap <leader>a :A<cr>
 
 " vim-rspec
-let g:rspec_command = "Dispatch rspec -fp -b {spec}"
+let g:rspec_command = "Dispatch zeus rspec -fp -b {spec}"
 map <Leader>mt :call RunCurrentSpecFile()<CR>
 map <Leader>mm :call RunNearestSpec()<CR>
 map <Leader>ml :call RunLastSpec()<CR>
