@@ -29,9 +29,8 @@ export ELASTICSEARCH_URL=http://localhost:9200
 
 export PATH=$PATH:/usr/local/oracle/11gCli/instantclient/
 export PATH="/usr/local/bin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
 export VISUAL=vim
 export EDITOR=$VISUAL
 set -o emacs
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$HOME/.rvm/bin:$PATH  # Add RVM to PATH for scripting
