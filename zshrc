@@ -19,7 +19,7 @@ alias rerd='rake erd polymorphism=true inheritance=true'
 alias rg='rails generate'
 alias rspec='nocorrect rspec'
 alias tk='tmux kill-session -t '
-alias tmux='TERM=xterm-256color tmux'
+alias tmx='TERM=xterm-256color tmux'
 alias ..='cd ..'
 alias ...='cd ../..'
 
@@ -33,6 +33,4 @@ export VISUAL=vim
 export EDITOR=$VISUAL
 set -o emacs
 
-PATH=$HOME/.rvm/bin:$PATH  # Add RVM to PATH for scripting
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
