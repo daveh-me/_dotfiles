@@ -82,6 +82,7 @@ nnoremap ;j :update<cr>
 nnoremap ;q :q<cr>
 inoremap ;x <esc>:x<cr>
 nnoremap ;x :x<cr>
+nnoremap ;n :NERDTree<cr>
 
 vmap <expr> <LEFT> DVB_Drag('left') 
 vmap <expr> <RIGHT> DVB_Drag('right') 
