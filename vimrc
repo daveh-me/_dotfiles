@@ -7,7 +7,7 @@ set synmaxcol=200
 filetype plugin indent on
 
 " colours
-set background=light
+set background=dark
 syntax enable
 let g:solarized_termcolors=256
 colorscheme solarized
