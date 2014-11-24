@@ -8,11 +8,12 @@ stty -ixon
 
 alias ack='nocorrect ack'
 alias g='git'
+alias gst='git status'
 alias ls='ls -G'
 alias ll='ls -lG'
 alias psg='ps -ef | grep '
 alias rbp='rails_best_practices -f html --with-git'
-alias rcane='cane --max-violations 20 --style-measure 90 --style-glob {app,lib}/**/*.rb'
+alias rc='rubocop -R'
 alias rdbm='rake db:migrate && RAILS_ENV=test RAILS_ENV=test rake db:migrate'
 alias rdbs='rake db:seed'
 alias rerd='rake erd polymorphism=true inheritance=true'
@@ -28,9 +29,11 @@ export NLS_LANG=AMERICAN_AMERICA.WE8MSWIN1252
 export ELASTICSEARCH_URL=http://localhost:9200
 
 export PATH=$PATH:/usr/local/oracle/11gCli/instantclient/
-export PATH="/usr/local/bin:$PATH"
+export PATH="/Users/dave/Library/Haskell/bin:/usr/local/bin:$PATH"
 export VISUAL=vim
 export EDITOR=$VISUAL
 set -o emacs
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
