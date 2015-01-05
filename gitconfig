@@ -12,6 +12,8 @@
 [alias]
     aa = add --all
     ap = add --patch
+    bl = for-each-ref --count=30 --sort=-committerdate refs/heads/ --format='%(refname:short) %(committerdate:local)'
+    br = for-each-ref --count=30 --sort=-committerdate refs/remotes/ --format='%(refname:short) %(committerdate:local)'
     br = branch
     ci = commit -v
     co = checkout
